@@ -21,7 +21,7 @@ function App() {
     <main>
       <form id="note-form">
         <textarea id="note-input" maxlength="300" placeholder="Write something smart..."></textarea>
-        <div class="form-footer">
+        <div className="form-footer">
           <span id="char-count">0/300</span>
           <button type="submit">➕ Add Note</button>
         </div>
