@@ -51,15 +51,25 @@
 body.dark {
   --bg: #121212;
   --card: rgba(30, 30, 30, 0.85);
-  --text: #eee;
+  --text: #dbdbdb;
   --accent: #ffbe0b;
   --border: #333;
+}
+
+/* Light theme */
+body.light textarea::placeholder {
+  color: #454545;
+}
+
+/* Dark theme */
+body.dark textarea::placeholder {
+  color: var(--text);
 }
 
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
@@ -89,8 +99,9 @@ header {
   resize: none;
   border-radius: 8px;
   outline: none;
-  background: rgba(255,255,255,0.4);
+  background: var(--card);
   color: var(--text);
+  transition: background 0.3s, color 0.3s;
 }
 
 .form-footer {
@@ -112,6 +123,6 @@ header {
   border-radius: 12px;
   padding: 15px;
   position: relative;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s;
 }
